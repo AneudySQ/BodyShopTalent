@@ -55,7 +55,7 @@
 
 /* ================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,700;1,100&display=swap');
 
 /* ================================================== */
 
@@ -89,7 +89,7 @@ html {
                                   supported by Chrome, Edge, Opera and Firefox */
 }
 body {
-	font-family:"Poppins", Helvetica, Arial, sans-serif;
+	font-family:"Montserrat", Helvetica, Arial, sans-serif;
 	font-size: 16px;
 	font-weight: 300;
 	color: #888888;
@@ -210,7 +210,7 @@ header.autoshow.scrollOff {
 header div#logo {
 	display: inline-block;
 	height: 100%;
-	font-family: "Poppins", sans-serif;
+	font-family: "Montserrat", sans-serif;
 	font-weight:bold;
 	font-size:24px;
 	color: white;
@@ -234,7 +234,7 @@ header .logo-scroll {
 	display: none;
 }
 header .logo, header .logo-2{
-	font-family:"Poppins";
+	font-family:"Montserrat";
 	color:#fff;
 	font-size:40px;
 	font-weight:300;
@@ -393,7 +393,7 @@ header .header-col.mid .social-icons{
 	margin: 0;
 	float: none;
 	text-align: center;
-	font-family: "Poppins";
+	font-family: "Montserrat";
 	letter-spacing: 5px;
 	font-size: 14px;
 	padding: 0;
@@ -509,7 +509,7 @@ header .header-col.mid .social-icons{
 
 #mainmenu {
 	display:inline-block;
-	font-family: "Poppins";
+	font-family: "Montserrat";
 	font-size: 13px;
 	margin:0 auto;
 	float:none;
@@ -1230,13 +1230,13 @@ header.header-for-mobile{
 	font-size: 14px;
 }
 .blog-list .date-box .day {
-	font-family: "Poppins";
+	font-family: "Montserrat";
 	color: #222222;
 	font-weight: bold;
 	font-size: 28px;
 }
 .blog-list .date-box .month {
-	font-family: "Poppins";
+	font-family: "Montserrat";
 	color: #fff;
 	font-size: 13px;
 	letter-spacing: 3px;
@@ -1383,7 +1383,7 @@ header.header-for-mobile{
 .post-date,.post-comment,.post-like,.post-by,.post-author{
 	font-size: 13px;
 	color:#999;
-	font-family:"Poppins";
+	font-family:"Montserrat";
 }
 .post-author{
 	color:#777;
@@ -2144,7 +2144,7 @@ a.btn-text-light {
 	left: 20px;
 }
 a.btn-custom, .btn-custom, a.btn-slider, .btn-slider {
-	font-family: "Poppins";
+	font-family: "Montserrat";
 	font-size: 12px;
 	min-width: 120px;
 }
@@ -2544,7 +2544,7 @@ h1, h2, h4, h3, h5, h6,
 footer.footer-light h5, header.header-light div#logo a,
 header.smaller.scroll-light div#logo a {
 	margin-top:0;
-	font-family: "Poppins";
+	font-family: "Montserrat";
 	font-weight: 600;
 	color: #35404e;
 }
@@ -2632,7 +2632,7 @@ h2 {
 	line-height:48px;
 }
 h2.title{
-	font-weight: 900;
+	font-weight: 10;
 	font-size: 64px;
 	line-height: 64px;
 	margin-bottom: 60px;
@@ -2690,7 +2690,7 @@ h3.s_border {
 	margin-bottom: 40px;
 }
 .h3-s1{
-	font-family: "Poppins";
+	font-family: "Montserrat";
 	font-weight: 500;
 	font-size: 32px;
 }
@@ -2724,7 +2724,7 @@ h4.s1{
 	text-align: center;
 }
 h4.s2{
-	font-family: "Poppins", Arial, Helvetica, sans-serif;
+	font-family: "Montserrat", Arial, Helvetica, sans-serif;
 	font-weight:200;
 	line-height:1.8em;
 }
@@ -2734,7 +2734,7 @@ h4.s3 {
 	font-weight: lighter;
 }
 h4.s3 {
-	font-family: "Poppins";
+	font-family: "Montserrat";
 	font-weight: 300;
 	font-size: 12px;
 	letter-spacing: 15px;
@@ -2779,7 +2779,7 @@ h2.subtitle {
 	margin-top: 0;
 }
 h2.name {
-	font-family: "Poppins";
+	font-family: "Montserrat";
 	color: #fff;
 	font-size: 84px;
 	line-height: 50px;
@@ -2789,7 +2789,7 @@ h2.name span {
 	font-size: 32px;
 }
 h2.name-s1 {
-	font-family: "Poppins";
+	font-family: "Montserrat";
 	color: #fff;
 	font-size: 84px;
 	font-weight: 700;
@@ -2807,7 +2807,7 @@ h2.hw {
 	font-weight: lighter;
 }
 h2.deco {
-	font-family: "Poppins";
+	font-family: "Montserrat";
 	text-align: center;
 	font-weight: 600;
 	font-size: 20px;
@@ -2832,7 +2832,7 @@ h2.deco span:after {
 	margin-left: 15px;
 }
 h2.hs1 {
-	font-family: "Poppins";
+	font-family: "Montserrat";
 	font-size: 40px;
 }
 h2.hs1 i {
@@ -2857,7 +2857,7 @@ h2 .de_light .text-light h2 {
 	border-top: 1px solid rgba(255, 255, 255, .5);
 }
 h2.s2 {
-	font-family: "Poppins";
+	font-family: "Montserrat";
 	font-weight: 400;
 }
 h2.s3{
@@ -2876,7 +2876,7 @@ h4.style-2 {
 	font-size: 18px;
 }
 h5.s2 {
-	font-family: "Poppins";
+	font-family: "Montserrat";
 	letter-spacing: 1px;
 	font-size: 14px;
 }
@@ -3632,7 +3632,7 @@ ul.info-list,ul.info-list li{
 	list-style: none;
 	margin-bottom: 0;
 	padding:0;
-	font-family: "Poppins";
+	font-family: "Montserrat";
 }
 ul.info-list li .d_title{
 	margin-right:10px;
@@ -3843,7 +3843,7 @@ ul.info-list li .d_title{
 }
 .pricing-s1 .top .price b {
 	color: #fff;
-	font-family:"Poppins";
+	font-family:"Montserrat";
 	font-weight:500;
 }
 .pricing-s1 .top .price .month {
@@ -4017,7 +4017,7 @@ ul.info-list li .d_title{
 }
 .pricing-s2 .top .price b {
 	font-size: 40px;
-	font-family:"Poppins";
+	font-family:"Montserrat";
 	font-weight:500;
 }
 .pricing-s2 .top .price .month {
@@ -4392,7 +4392,7 @@ ul.info-list li .d_title{
 }
 .accordion-section-title
 {
-		font-family:"Poppins";
+		font-family:"Montserrat";
 	    color:#111111;
         width: 100%;
         padding: 15px;
@@ -4555,7 +4555,7 @@ ul.info-list li .d_title{
 	padding: 30px 0 30px 0;
 	border-radius: 120px;
 	color: #222;
-	font-family: "Poppins";
+	font-family: "Montserrat";
 	font-size: 16px;
 	-moz-border-radius: 120px;
 	-webkit-border-radius: 120px;
@@ -4684,7 +4684,7 @@ ul.info-list li .d_title{
 		display:inline-block;
 	}
 	.de_tab.tab_steps.style-2 .de_nav li span {
-	font-family:"Poppins";
+	font-family:"Montserrat";
 	background:rgba(255,255,255,.1);
 	border-radius:0px;
 	font-size:16px;
@@ -4986,7 +4986,7 @@ ul.info-list li .d_title{
 	background: none;
 	border: none;
 	margin-top: 20px;
-	font-family: "Poppins";
+	font-family: "Montserrat";
 	font-size: 14px;
 	text-transform: uppercase;
 	letter-spacing: 2px;
@@ -5028,7 +5028,7 @@ ul.info-list li .d_title{
 	border: solid 1px rgba(255, 255, 255, .2);
 	padding: 10px 20px 10px 20px;
 	margin: 5px;
-	font-family: "Poppins";
+	font-family: "Montserrat";
 	text-transform: uppercase;
 	letter-spacing: 5px;
 }
@@ -5213,7 +5213,7 @@ a.btn-left, a.btn-right {
 	padding-top: 20px;
 }
 .de_testi.opt-2 blockquote {
-	font-family:"Poppins";
+	font-family:"Montserrat";
 	border:none;
 	color: #35404e;
 	font-weight:300;
@@ -5241,7 +5241,7 @@ a.btn-left, a.btn-right {
 	background:rgba(20,20,20,.5);
 }
 .de_testi.opt-2 blockquote p{
-	font-family:"Poppins";
+	font-family:"Montserrat";
 	font-size:16px;
 	padding:40px 0 0 0;
 }
@@ -6387,7 +6387,7 @@ img.img-rounded {
 }
 
 .label {
-	font-family: "Poppins", Arial, Helvetica, sans-serif;
+	font-family: "Montserrat", Arial, Helvetica, sans-serif;
 }
 table thead {
 	font-weight: bold;
@@ -6435,7 +6435,7 @@ p.sub{
 	border: solid 1px #202220;
 }
 blockquote {
-	font-family:"Poppins";
+	font-family:"Montserrat";
 	font-size: 24px;
 	font-style: normal;
 	font-weight: 500;
@@ -6444,7 +6444,7 @@ blockquote {
 	border-left:solid 3px #333333;
 }
 blockquote span {
-	font-family:"Poppins";
+	font-family:"Montserrat";
 	display: block;
 	font-size: 14px;
 	font-style: normal;
@@ -6473,7 +6473,7 @@ blockquote.s1{
 }
 blockquote.s1 span.b-text{
 	font-weight: bold;
-	font-family: "Poppins";
+	font-family: "Montserrat";
 	padding:30px;
 	border:none;
 }
@@ -6613,7 +6613,7 @@ blockquote.s3:before{
 	color: #555;
 	font-size: 16px;
 	line-height: 20px;
-	font-family: "Poppins", Arial, Helvetica, sans-serifr;
+	font-family: "Montserrat", Arial, Helvetica, sans-serifr;
 	padding: 10px 20px 0px 60px;
 	font-weight: 700;
 	display: block;
@@ -6885,7 +6885,7 @@ a, a:hover, .test-column, .test-column:hover {
 	color: rgba(255, 255, 255, 1);
 }
 .pf_text {
-	font-family:"Poppins";
+	font-family:"Montserrat";
 	color: #ffffff;
 	margin: 0 auto;
 }
@@ -7077,7 +7077,7 @@ a, a:hover, .test-column, .test-column:hover {
 	font-weight: bold;
 }
 span.overlay {
-	font-family:"Poppins";
+	font-family:"Montserrat";
 	text-align: center;
 	display: flex;
 	width: 100%;
@@ -8265,7 +8265,7 @@ section .color-overlay {
 	margin-bottom: 60px;
 }
 .teaser-text {
-	font-family: "Poppins";
+	font-family: "Montserrat";
 	font-size: 18px;
 	color: rgba(255, 255, 255, .5);
 	line-height: normal;
@@ -9318,7 +9318,7 @@ animation: blink 0.7s infinite;
 	margin-bottom:5px;
 }
 .date-box .m{
-	font-family:"Poppins";
+	font-family:"Montserrat";
 	font-size:13px;
 	text-transform:uppercase;
 	letter-spacing:8px;
@@ -9660,7 +9660,7 @@ h3.de-title{
 	display: table;
 	left:40px;
 	color:#fff;
-	font-family: "Poppins";
+	font-family: "Montserrat";
 }
 #v-wrap .vw-inner{
 	display: table-cell;
@@ -9783,7 +9783,7 @@ h3.de-title{
 }
 .de_review blockquote {
 	border: none;
-	font-family: "Poppins", Georgia, "Times New Roman", Times, serif;
+	font-family: "Montserrat", Georgia, "Times New Roman", Times, serif;
 }
 .de_review .de_nav li span {
 	border: 1px solid #202220;
@@ -9905,7 +9905,7 @@ h3.de-title{
 	letter-spacing: 6px;
 }
 .very-big-white {
-	font-family: "Poppins";
+	font-family: "Montserrat";
 	font-size: 64px;
 	color: #fff;
 	margin: 0;
@@ -9973,7 +9973,7 @@ a.btn-slider:hover {
 	transition-duration: 0s;
 }
 #filters {
-	font-family:"Poppins";
+	font-family:"Montserrat";
 	padding: 0;
 	margin: 0;
 	margin-bottom: 40px;
@@ -10233,7 +10233,7 @@ a.btn-slider:hover {
 }
 blockquote.very-big {
 	border: none;
-	font-family: "Poppins";
+	font-family: "Montserrat";
 	text-align: center;
 	border: none;
 	font-size: 32px;
@@ -10242,7 +10242,7 @@ blockquote.very-big {
 	font-style: normal;
 }
 blockquote.very-big span {
-	font-family: "Poppins";
+	font-family: "Montserrat";
 }
 a, img {
 	outline: 0;
