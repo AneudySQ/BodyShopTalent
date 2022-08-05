@@ -5188,7 +5188,7 @@ a.btn-left, a.btn-right {
 	font-weight: 500;
 }
 .de_testi blockquote p {
-	margin-top: 10px;
+	margin-top: 5px;
 }
 .de_testi blockquote:before {
 	font-family: FontAwesome;
@@ -5240,16 +5240,6 @@ a.btn-left, a.btn-right {
 	-webkit-border-radius:2px;
 }
 
-.de_testi.opt-2 blockquote:before{
-	font-family: "FontAwesome";
-	content: "\f10d";
-	display:block;
-	color:rgba(0,0,0,.1);
-	z-index:100;
-	font-size:20px;
-	background:none;
-	left:20px;
-}
 
 .text-light .de_testi.opt-2 blockquote{
 	color:#fff;
