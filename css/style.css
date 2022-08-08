@@ -2760,6 +2760,12 @@ h1.title strong {
 	letter-spacing: 0;
 	font-weight: normal;
 }
+p .title strong {
+	text-transform: none;
+	letter-spacing: 0;
+	font-weight: bold;
+	color: rgba(var(--primary-color-rgb));
+}
 h1.hs1 {
 	font-family: "Parisienne";
 	font-size: 96px;
