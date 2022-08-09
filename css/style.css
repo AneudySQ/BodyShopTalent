@@ -1888,6 +1888,12 @@ display: inline-block;
 	text-align: right;
 }
 
+.iconos{
+	color: #0EC3F7;
+	width: 10px;
+
+}
+
 /* button and link */
 
 
@@ -5334,10 +5340,10 @@ blockquote.testimonial-big{
 	border:none;
 	padding:0;
 	margin:0;
-	font-size:16px;
-	line-height:1.8em;
+	font-size:14px;
+	line-height:1.5em;
 	font-style:italic;
-	padding:40px;
+	padding:20px;
 	color:#ffffff;
 }
 blockquote.testimonial-big .name{
@@ -5351,16 +5357,12 @@ blockquote.testimonial-big .title{
 	font-weight:bold;
 }
 blockquote.testimonial-big:before{
-	display:block;
-	width:100%;
-	font-family:FontAwesome;
-	content: "\f10d";
-	padding-bottom:10px;
+	content: url('/images/bateria.gif');
+	align-content: center;
+	margin: auto;
 	font-size:28px;
 	display:inline-block;
 	padding:10px 20px 10px 20px;
-	font-style:normal;
-	margin-left: -20px;
 }
 blockquote.testimonial-big > img{
 	width:100px !important;
