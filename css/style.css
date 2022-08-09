@@ -5338,13 +5338,11 @@ a.btn-left, a.btn-right {
 blockquote.testimonial-big{
 	background: rgba(255,255,255,.025);
 	border:none;
-	padding:0;
-	margin:0;
+	padding:10;
+	margin:10;
 	font-size:14px;
 	line-height:1.5em;
 	font-style:italic;
-	padding:20px;
-	color:#ffffff;
 }
 blockquote.testimonial-big .name{
 	margin-top:20px;
@@ -5356,13 +5354,18 @@ blockquote.testimonial-big .title{
 	font-size:26px;
 	font-weight:bold;
 }
+
 blockquote.testimonial-big:before{
+	display:block;
+	font-family:FontAwesome;
 	content: url('/images/bateria.gif');
 	align-content: center;
 	margin: auto;
+	padding-bottom:10px;
 	font-size:28px;
 	display:inline-block;
-	padding:10px 20px 10px 20px;
+	padding:10px 10px 10px 10px;
+	font-style:normal;
 }
 blockquote.testimonial-big > img{
 	width:100px !important;
