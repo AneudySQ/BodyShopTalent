@@ -5344,13 +5344,13 @@ a.btn-left, a.btn-right {
 
 blockquote.testimonial-big{
 	background: rgba(255,255,255,.025);
+	display:contents;
 	border:none;
 	padding:10;
 	margin:10;
 	font-size:14px;
 	line-height:1.5em;
 	font-style:italic;
-
 }
 blockquote.testimonial-big .name{
 	margin-top:20px;
@@ -5364,13 +5364,14 @@ blockquote.testimonial-big .title{
 }
 
 blockquote.testimonial-big:before{
-	display:inline-block;
+	display:block;
 	font-family:FontAwesome;
 	content: url('/images/bateria.gif');
 	align-content: center;
 	margin: auto;
-	padding-bottom:10px;
+	padding-bottom:50px;
 	padding:10px 10px 10px 10px;
+	font-style:normal;
 }
 blockquote.testimonial-big > img{
 	width:100px !important;
@@ -5380,6 +5381,7 @@ blockquote.testimonial-big > img{
 	-moz-border-radius:60px;
 	-webkit-border-radius:60px;
 }
+
 
 
 /* timeline */
