@@ -3,10 +3,10 @@ $subject = 'BodyShopTalent'; // Subject of your email
 $to = 'aneudysq@gmail.com';  //Recipient's E-mail
 $emailTo = $_REQUEST['email'];
 
-$name = $_REQUEST['Nombre Artistico'];
+$name = $_REQUEST['name'];
 $email = $_REQUEST['email'];
-$phone = $_REQUEST['Instagram O tiktok'];
-$msg = $_REQUEST['Que te inspira?'];
+$phone = $_REQUEST['phone'];
+$msg = $_REQUEST['msg'];
 
 $email_from = $name.'<'.$email.'>';
 
