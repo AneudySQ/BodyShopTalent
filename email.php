@@ -15,10 +15,10 @@ $headers .= "Content-type: text/html; charset=iso-8859-1";
 $headers .= "From: ".$name.'<'.$email.'>'."\r\n"; // Sender's E-mail
 $headers .= "Return-Path:"."From:" . $email;
 
-$message .= 'Name : ' . $name . "\n";
+$message .= 'Nombre Artistico: ' . $name . "\n";
 $message .= 'Email : ' . $email . "\n";
-$message .= 'Phone : ' . $phone . "\n";
-$message .= 'Message : ' . $msg;
+$message .= 'Instagram O tiktok : ' . $phone . "\n";
+$message .= 'Que te inspira? : ' . $msg;
 
 if (@mail($to, $subject, $message, $email_from))
 {
