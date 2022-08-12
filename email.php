@@ -7,6 +7,7 @@ $name = $_REQUEST['name'];
 $email = $_REQUEST['email'];
 $phone = $_REQUEST['phone'];
 $msg = $_REQUEST['msg'];
+$video = $_REQUEST['video'];
 
 $email_from = $name.'<'.$email.'>';
 
@@ -19,6 +20,7 @@ $message .= 'Nombre Artistico: ' . $name . "\n";
 $message .= 'Email : ' . $email . "\n";
 $message .= 'Instagram O tiktok : ' . $phone . "\n";
 $message .= 'Que te inspira? : ' . $msg;
+$message .= 'Que te inspira? : ' . $video;
 
 if (@mail($to, $subject, $message, $email_from))
 {
