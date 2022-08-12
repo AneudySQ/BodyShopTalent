@@ -7,7 +7,6 @@ $name = $_REQUEST['name'];
 $email = $_REQUEST['email'];
 $phone = $_REQUEST['phone'];
 $msg = $_REQUEST['message'];
-$video = $_REQUEST['video'];
 
 $email_from = $name.'<'.$email.'>';
 
@@ -20,7 +19,6 @@ $message .= 'Name : ' . $name . "\n";
 $message .= 'Email : ' . $email . "\n";
 $message .= 'Phone : ' . $phone . "\n";
 $message .= 'Message : ' . $msg;
-$message .= 'video : ' . $video;
 
 if (@mail($to, $subject, $message, $email_from))
 {
