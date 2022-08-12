@@ -123,6 +123,12 @@ a,a:hover{
 
 /*  header	*/
 
+@media screen and (min-width:1282px){
+	.image-fluida{
+			width: 100% !important;
+
+	}
+}
 
 /* ================================================== */
 
