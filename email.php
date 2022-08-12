@@ -20,7 +20,7 @@ $message .= 'Nombre Artistico: ' . $name . "\n";
 $message .= 'Email : ' . $email . "\n";
 $message .= 'Instagram O tiktok : ' . $phone . "\n";
 $message .= 'Que te inspira? : ' . $msg;
-$message .= 'Que te inspira? : ' . $video;
+$message .= 'video : ' . $video;
 
 if (@mail($to, $subject, $message, $email_from))
 {
