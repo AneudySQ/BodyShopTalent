@@ -1,5 +1,5 @@
 <?php
-$subject = 'You Got Message'; // Subject of your email
+$subject = 'BodyShopTalent'; // Subject of your email
 $to = 'aneudysq@gmail.com';  //Recipient's E-mail
 $emailTo = $_REQUEST['email'];
 
@@ -7,6 +7,7 @@ $name = $_REQUEST['name'];
 $email = $_REQUEST['email'];
 $phone = $_REQUEST['phone'];
 $msg = $_REQUEST['message'];
+$video = $_REQUEST['video'];
 
 $email_from = $name.'<'.$email.'>';
 
@@ -19,6 +20,7 @@ $message .= 'Name : ' . $name . "\n";
 $message .= 'Email : ' . $email . "\n";
 $message .= 'Phone : ' . $phone . "\n";
 $message .= 'Message : ' . $msg;
+$message .= 'video : ' . $video;
 
 if (@mail($to, $subject, $message, $email_from))
 {
