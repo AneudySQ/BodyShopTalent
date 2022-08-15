@@ -1,6 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/MacBook-Pro-de-Bodyshop-2/public_html/
-    - /bin/cp index.html $DEPLOYPATH
-    - /bin/cp style.css $DEPLOYPATH
+    - export DEPLOYPATH=/home/BodyShopTalent/public_html/
+    - /bin/cp -R images $DEPLOYPATH
