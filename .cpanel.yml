@@ -1,5 +1,7 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/bodyshoptalent/public_html/
-    - /bin/cp -R images $DEPLOYPATH
+ - export DEPLOYPATH=/home/bodyshoptalent/public_html/
+ - /bin/cp index.html $DEPLOYPATH
+ - /bin/cp style.css $DEPLOYPATH
+ 
