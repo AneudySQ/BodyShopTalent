@@ -1,0 +1,6 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/MacBook-Pro-de-Bodyshop-2/public_html/
+    - /bin/cp index.html $DEPLOYPATH
+    - /bin/rsync  -av BodyShopTalent/ $DEPLOYPATH
