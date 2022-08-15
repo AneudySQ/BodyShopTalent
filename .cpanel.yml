@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/BodyShopTalent/public_html/
+    - export DEPLOYPATH=/home/AneudySQ/public_html/
     - /bin/cp -R images $DEPLOYPATH
