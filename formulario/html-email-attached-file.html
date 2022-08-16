@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="Advanced Contact Form with File Uploader">
+	<meta name="author" content="UWS">
+	<title>Sendy | Advanced Contact Form</title>
+
+	<!-- Favicon -->
+	<link href="img/favicon.png" rel="shortcut icon">
+
+	<!-- Google Fonts - Poppins -->
+	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+
+	<!-- Font Awesome CSS -->
+	<link href="vendor/fontawesome/css/all.min.css" rel="stylesheet">
+
+	<!-- Custom Font Icons -->
+	<link href="vendor/icomoon/css/iconfont.min.css" rel="stylesheet">
+
+	<!-- Vendor CSS -->
+	<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="vendor/dmenu/css/menu.css" rel="stylesheet">
+	<link href="vendor/hamburgers/css/hamburgers.min.css" rel="stylesheet">
+	<link href="vendor/mmenu/css/mmenu.min.css" rel="stylesheet">
+	<link href="vendor/filepond/css/filepond.css" rel="stylesheet">
+
+	<!-- Main CSS -->
+	<link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+	<!-- Preloader -->
+	<div id="preloader">
+		<div data-loader="circle-side"></div>
+	</div>
+	<!-- Preloader End -->
+
+	<!-- Page -->
+	<div id="page">
+		<!-- Header -->
+		<header class="main-header sticky">
+			<div class="container">
+				<div class="row">
+						<!-- Menu -->
+						<nav id="menu" class="main-menu">
+						</nav>
+						<!-- Menu End -->
+				</div>
+			</div>
+		</header>
+		<!-- Header End -->
+
+		<!-- Sub Header -->
+		<div class="sub-header">
+			<div class="container text-center">
+				<h1>Estas a 5 pasos para avanzar</h1>
+			</div>
+		</div>
+		<!-- Sub Header End -->
+
+		<!-- Main -->
+		<main>
+			<!-- Contact  -->
+			<div class="contact tex">
+				<div class="container">
+					<!-- Form -->
+					<form method="POST" id="contactForm" name="contactForm" action="php/send_phpmailer_file_attachment_email_template.php">
+						<div class="row">
+							<div class="col-lg-12" id="mainContent">
+								<!-- Personal Details -->
+								<div class="row box first">
+									<div class="box-header">
+										<h3><strong>1</strong>Datos personales</h3>
+									</div>
+									<div class="col-md-12 col-sm-12">
+										<div class="form-group">
+											<input id="username" class="form-control" name="username" placeholder="Nombre y apellido" type="text" data-parsley-pattern="^[a-zA-Z\s.]+$" required />
+										</div>
+									</div>
+									<div class="col-md-12 col-sm-12">
+										<div class="form-group">
+											<input id="email" class="form-control" name="email" placeholder="Correo Electrónico" type="email" required />
+										</div>
+									</div>
+									<div class="col-md-12 col-sm-12">
+										<div class="form-group">
+											<input id="phone" class="form-control" name="phone" placeholder="Numero de contacto" type="text" data-parsley-pattern="01234567897" />
+										</div>
+									</div>
+								</div>
+								<!-- Personal Details End -->
+								<!-- Subject -->
+								<div class="row box">
+									<div class="box-header">
+										<h3><strong>2</strong>Posición</h3>
+										<p>Selecciona la posición a la que quieres aplicar </p>
+									</div>
+									<div class="col-12">
+										<div class="form-group">
+											<input type="hidden" id="subject" name="subject" value="General Information" />
+											<select id="subjectList" class="wide" name="subjectList">
+												<option value="0">General Information</option>
+												<option value="1">Subject Topic 1</option>
+												<option value="2">Subject Topic 2</option>
+												<option value="3">Subject Topic 3</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<!-- Subject End -->
+								<!-- File Uploader -->
+								<div class="row box">
+									<div class="box-header">
+										<h3><strong>3</strong>Adjunta tu Curriculum Vitae </h3>
+										<p>Solo se permite JPG, PDF, PNG, Con un máximo de peso de 2MB </p>
+									</div>
+									<div class="col-md-12">
+										<div class="form-group">
+											<input type="file" name="filepond[]" />
+										</div>
+									</div>
+								</div>
+								<!-- File Uploader End -->
+								<!-- Message -->
+								<div class="row box">
+									<div class="box-header">
+										<h3><strong>4</strong>Argumento</h3>
+										<p>Has un breve argumento de porque deberías ser seleccionado </p>
+									</div>
+									<div class="col-md-12">
+										<div class="form-group">
+											<textarea id="inputMessage" class="form-control" name="message" placeholder="Escribe el mensaje" data-parsley-pattern="^[a-zA-Z0-9\s.:,!?']+$"
+												required></textarea>
+										</div>
+									</div>
+								</div>
+								<!-- Message End -->
+								<!-- Terms -->
+								<div class="row box">
+									<div class="box-header">
+										<h3><strong>5</strong>Descargo</h3>
+										<p>Acepto los términos y condiciones que conlleva este proceso.</p>
+									</div>
+									<div class="col-md-12">
+										<div class="form-group">
+											<input type="checkbox" id="cbx" class="inp-cbx" name="terms" value="yes" required />
+											<label class="cbx terms" for="cbx">
+												<span>
+													<svg width="12px" height="10px" viewbox="0 0 12 10">
+														<polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+													</svg>
+												</span>
+												<span>Acepto</span>
+											</label>
+										</div>
+									</div>
+								</div>
+								<!-- Terms End -->
+								<!-- Submit-->
+								<div class="row box">
+									<div class="col-12">
+										<div class="form-group">
+											<button type="submit" name="submit" class="btn-form-func">
+												<span class="btn-form-func-content">Envianos</span>
+												<span class="icon"><i class="fa fa-paper-plane" aria-hidden="true"></i></span>
+											</button>
+										</div>
+									</div>
+								</div>
+								<!-- Submit -->
+							</div>
+						</div>
+					</form>
+					<!-- Form End -->
+				</div>
+			</div>
+			<!-- Contact End -->
+		</main>
+		<!-- Main End -->
+
+		<!-- Footer -->
+	</div>
+	<!-- Page End -->
+
+	<!-- Back to top button -->
+	<div id="toTop"><i class="fa fa-chevron-up"></i></div>
+
+	<!-- Vendor Javascript Files -->
+	<script src="vendor/jquery/jquery.min.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script src="vendor/easing/js/easing.min.js"></script>
+	<script src="vendor/parsley/js/parsley.min.js"></script>
+	<script src="vendor/nice-select/js/jquery.nice-select.min.js"></script>
+	<script src="vendor/theia-sticky-sidebar/js/ResizeSensor.min.js"></script>
+	<script src="vendor/theia-sticky-sidebar/js/theia-sticky-sidebar.min.js"></script>
+	<script src="vendor/mmenu/js/mmenu.min.js"></script>
+	<script src="vendor/filepond/js/filepond-plugin-file-validate-size.js"></script>
+	<script src="vendor/filepond/js/filepond-plugin-file-validate-type.js"></script>
+	<script src="vendor/filepond/js/filepond.min.js"></script>
+
+	<!-- Main Javascript File -->
+	<script src="js/scripts.js"></script>
+
+</body>
+
+</html>
