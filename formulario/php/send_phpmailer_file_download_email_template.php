@@ -137,8 +137,8 @@ if (!$errors) {
 
     	// Recipients
     	$mail->setFrom('a.saldana@clubbodyshop.com', 'BodyShopTalent');                				// Set Sender    	
-		$mail->addAddress(['email']); 												// Set Recipients		
-    	$mail->addReplyTo(['email'], 'BodyShopTalent');          					// Set Reply-to Address
+		$mail->addAddress('a.saldana@clubbodyshop.com', ' '); 	// Set Recipients		
+    	$mail->addReplyTo('a.saldana@clubbodyshop.com', 'BodyShopTalent');          					// Set Reply-to Address
     	$mail->isHTML(true);                                                       
     	$mail->Subject = 'Message';                                     		// Email Subject
 
