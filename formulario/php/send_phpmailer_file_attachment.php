@@ -131,7 +131,7 @@ if (!$errors) {
     	// Recipients
     	$mail->setFrom('aneudysq@outlook.com', 'Sendy');                				// Set Sender    	
 		$mail->addAddress('aneudysq@gmail.com', 'Ultimate Websolutions'); 	// Set Recipients		
-    	$mail->addReplyTo('a.saldana@clubbodyshop.com, 'Sendy');          					// Set Reply-to Address
+    	$mail->addReplyTo('a.saldana@clubbodyshop.com', 'Sendy');          					// Set Reply-to Address
     	$mail->isHTML(true);                                                       
     	$mail->Subject = 'Message';                                     		// Email Subject
 
