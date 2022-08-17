@@ -82,7 +82,7 @@ if ($_POST['email'] != '') {
 }
 else {
 	// Required to fill
-	$errors .= 'Please enter your email address.<br/>';
+	$errors .= 'Por favor, introduzca su dirección de correo electrónico<br/>';
 }
 
 // Phone 
@@ -92,7 +92,7 @@ if ($_POST['phone'] != '') {
 	$_POST['phone'] = filter_var($_POST['phone'], FILTER_SANITIZE_STRING);
 
 	// After sanitization validation is performed
-	$pattern_phone = array('options'=>array('regexp'=>'/^\+{1}[0-9]/'));
+	$pattern_phone = array('options'=>array('regexp'=>"/^[0-9]{3}-[0-9]{4}-[0-9]{4}$/"));
 	$_POST['phone'] = filter_var($_POST['phone'], FILTER_VALIDATE_REGEXP, $pattern_phone);
 	
 	if($_POST['phone'] == '') {
@@ -219,7 +219,7 @@ if (!$errors) {
 	echo '<div style="color: #e9431c">' . $errors . '</div>';
 	echo '<div id="success">';    
 	echo '<h4>Something went wrong.</h4>';
-	echo '<a class="animated-link" href="../index.html">Go Back</small>';
+	echo '<a class="animated-link" href="../formulario.html">Go Back</small>';
 	echo '</div>';	
 }
 
