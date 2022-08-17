@@ -128,7 +128,7 @@ if (!$errors) {
 	/* Mail Sending
 	==================================== */
 
-    $to = "aneudysq@gmail.com"; // Your email goes here
+    $to = "websolutions.ultimate@gmail.com"; // Your email goes here
 	$subject = "Message";
 	$headers = "From: Sendy <replyto@yourdomain.com>";
 	$message = "MESSAGE ARRIVED VIA SENDY WITH FOLLOWING DETAILS" . "\n";
@@ -142,7 +142,7 @@ if (!$errors) {
 	$message .= "FILE" . "\n";
 	$message .= "--\n";
 	if (file_exists($file)) {
-		$message .= "https://bodyshoptalent.com/php/". $file;
+		$message .= "https://ultimatewebsolutions.net/sendy/php/". $file;
 	} else {
 		$message .= "Was NOT provided";
 	}		
@@ -180,7 +180,7 @@ if (!$errors) {
 	echo '<div style="color: #e9431c">' . $errors . '</div>';
 	echo '<div id="success">';    
 	echo '<h4>Something went wrong.</h4>';
-	echo '<a class="animated-link" href="../index.html">Regresa</small>';
+	echo '<a class="animated-link" href="../index.html">Go Back</small>';
 	echo '</div>';	
 }
 

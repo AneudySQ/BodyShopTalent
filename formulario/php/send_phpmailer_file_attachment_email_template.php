@@ -10,7 +10,7 @@
 	<title>Sendy | Advanced Contact Form</title>
 
 	<!-- Favicon -->
-	<link href="../images/favicon-32x32.png" rel="shortcut icon">
+	<link href="../img/favicon.png" rel="shortcut icon">
 
 	<!-- Google Fonts - Poppins, Karla -->
 	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
@@ -82,7 +82,7 @@ if ($_POST['email'] != '') {
 }
 else {
 	// Required to fill
-	$errors .= 'Por favor, introduzca su dirección de correo electrónico<br/>';
+	$errors .= 'Please enter your email address.<br/>';
 }
 
 // Phone 
@@ -92,11 +92,11 @@ if ($_POST['phone'] != '') {
 	$_POST['phone'] = filter_var($_POST['phone'], FILTER_SANITIZE_STRING);
 
 	// After sanitization validation is performed
-	$pattern_phone = array('options'=>array('regexp'=>'/^\+{1}[0-9]/'));
+	$pattern_phone = array('options'=>array('regexp'=>'/^\+{1}[0-9]+$/'));
 	$_POST['phone'] = filter_var($_POST['phone'], FILTER_VALIDATE_REGEXP, $pattern_phone);
 	
 	if($_POST['phone'] == '') {
-		$errors .= 'Por favor ingrese un número de teléfono válido<br/>';
+		$errors .= 'Please enter a valid phone number like: +363012345<br/>';
 	}
 }
 
@@ -118,7 +118,7 @@ function sanitizePostTitle($postName, $invalidMessage) {
 	return '';
 }
 
-$errors .= sanitizePostTitle('subject', 'Por favor, establezca un posición');
+$errors .= sanitizePostTitle('subject', 'Please set a valid Subject.');
 
 // Continue if NO errors found after validation
 if (!$errors) {	
@@ -126,6 +126,7 @@ if (!$errors) {
 	// Customer Details
 	$customer_name = $_POST['username'];
 	$customer_mail = $_POST['email'];
+	$customer_phone = $_POST['phone'];	
 	$customer_subject = $_POST['subject'];
 	$customer_message = $_POST['message'];
 
@@ -135,11 +136,11 @@ if (!$errors) {
 	try {
 
     	// Recipients
-    	$mail->setFrom('a.saldana@clubbodyshop.com', 'Body Shop Talent');                				// Set Sender    	
-		$mail->addAddress('aneudysq@outlook.com', 'Body Shop Talent'); 	// Set Recipients		
-    	$mail->addReplyTo('a.saldana@clubbodyshop.com', 'Body Shop Talent');          					// Set Reply-to Address
+    	$mail->setFrom('noreply@yourdomain.com', 'Sendy');                				// Set Sender    	
+		$mail->addAddress('websolutions.ultimate@gmail.com', 'Ultimate Websolutions'); 	// Set Recipients		
+    	$mail->addReplyTo('replyto@yourdomain.com', 'Sendy');          					// Set Reply-to Address
     	$mail->isHTML(true);                                                       
-    	$mail->Subject = 'Message';                                     		// Email Subject
+    	$mail->Subject = 'Message';                                     				// Email Subject
 
 		// Explore the uploaded file if exists
 		$tmp_dirs = [];
@@ -207,11 +208,10 @@ if (!$errors) {
 	echo '</g>';
 	echo '</svg>';
 	echo '</div>';    
-	echo '<h4>Muchas gracias,
-			Tu mensaje ha sido enviado. </h4>';
-	echo '<small>Revisa tu correo.</small>';
+	echo '<h4>Thank you for contacting us.</h4>';
+	echo '<small>Check your mailbox.</small>';
 	echo '</div>';
-	echo '<script src="js/redirect.js"></script>';
+	echo '<script src="../js/redirect.js"></script>';
 
 } else {
 
@@ -219,10 +219,9 @@ if (!$errors) {
 	echo '<div style="color: #e9431c">' . $errors . '</div>';
 	echo '<div id="success">';    
 	echo '<h4>Something went wrong.</h4>';
-	echo '<a class="animated-link" href="../formulario.html">Go Back</small>';
+	echo '<a class="animated-link" href="../index.html">Go Back</small>';
 	echo '</div>';	
 }
-
 
 ?>
 <!-- END PHP -->

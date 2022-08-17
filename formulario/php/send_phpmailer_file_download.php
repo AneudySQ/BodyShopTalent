@@ -129,9 +129,9 @@ if (!$errors) {
 	try {
 
     	// Recipients
-    	$mail->setFrom('aneudysq@gmail.com', 'Sendy');                				// Set Sender    	
-		$mail->addAddress('aneudysq@outlook.com', 'Ultimate Websolutions'); 	// Set Recipients		
-    	$mail->addReplyTo('a.saldana@clubbodyshop.com', 'Sendy');          					// Set Reply-to Address
+    	$mail->setFrom('noreply@yourdomain.com', 'Sendy');                				// Set Sender    	
+		$mail->addAddress('websolutions.ultimate@gmail.com', 'Ultimate Websolutions'); 	// Set Recipients		
+    	$mail->addReplyTo('replyto@yourdomain.com', 'Sendy');          					// Set Reply-to Address
     	$mail->isHTML(true);                                                       
     	$mail->Subject = 'Message';                                     		// Email Subject
 
@@ -148,7 +148,7 @@ if (!$errors) {
 
 		// Handle if user provided a file or not
 		if (file_exists($file)) {
-			$download_link = '<a href="https://bodyshoptalent.com/php/'.$file.'">Download the provided file</a>';
+			$download_link = '<a href="https://ultimatewebsolutions.net/sendy/php/'.$file.'">Download the provided file</a>';
 		} else {
 			$download_link = 'was NOT provided';
 		}
