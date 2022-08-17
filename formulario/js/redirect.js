@@ -1,4 +1,4 @@
 // Redirect
-function goBack() {
-    window.location.replace("http://stackoverflow.com");
+function delayedRedirect() {
+    window.location = 'https://ultimatewebsolutions.net/sendy/'
 }
