@@ -212,7 +212,7 @@ if (!$errors) {
 			Tu mensaje ha sido enviado. </h4>';
 	echo '<small>Revisa tu correo.</small>';
 	echo '</div>';
-	echo '<script src="../js/redirect.js"></script>';
+	echo '<script src="./js/redirect.js"></script>';
 
 } else {
 
