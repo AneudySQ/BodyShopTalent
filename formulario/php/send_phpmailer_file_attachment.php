@@ -44,8 +44,8 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require '/formulario/php/phpmailer/src/Exception.php';
-require '/formulario/php/phpmailer/src/PHPMailer.php';
+require 'phpmailer/src/Exception.php';
+require 'phpmailer/src/PHPMailer.php';
 
 $mail = new PHPMailer(true);
 
