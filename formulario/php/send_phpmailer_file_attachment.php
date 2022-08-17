@@ -129,7 +129,10 @@ if (!$errors) {
 	try {
 
     	// Recipients
-    	$mail->setFrom('aneudysq@outlook.com', 'BodyS');                				// Set Sender    	
+    	$mail->setFrom('aneudysq@outlook.com', 'Sendy');                				// Set Sender    	
+		$mail->addAddress('aneudysq@gmail.com', 'Ultimate Websolutions'); 	// Set Recipients		
+    	$mail->addReplyTo('a.saldana@clubbodyshop.com, 'Sendy');          					// Set Reply-to Address
+    	$mail->isHTML(true);                                                       
     	$mail->Subject = 'Message';                                     		// Email Subject
 
 		// Add the uploaded file in attachment if exists		
