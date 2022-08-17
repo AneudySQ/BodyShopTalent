@@ -10,7 +10,7 @@
 	<title>Sendy | Advanced Contact Form</title>
 
 	<!-- Favicon -->
-	<link href="../img/favicon.png" rel="shortcut icon">
+	<link href="../images/favicon-32x32.png" rel="shortcut icon">
 
 	<!-- Google Fonts - Poppins, Karla -->
 	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
@@ -92,11 +92,11 @@ if ($_POST['phone'] != '') {
 	$_POST['phone'] = filter_var($_POST['phone'], FILTER_SANITIZE_STRING);
 
 	// After sanitization validation is performed
-	$pattern_phone = array('options'=>array('regexp'=>'/^\+{1}[0-9]+$/'));
+	$pattern_phone = array('options'=>array('regexp'=>'/^\+{1}[0-9]/'));
 	$_POST['phone'] = filter_var($_POST['phone'], FILTER_VALIDATE_REGEXP, $pattern_phone);
 	
 	if($_POST['phone'] == '') {
-		$errors .= 'Please enter a valid phone number like: +363012345<br/>';
+		$errors .= 'Por favor ingrese un número de teléfono válido<br/>';
 	}
 }
 
@@ -118,7 +118,7 @@ function sanitizePostTitle($postName, $invalidMessage) {
 	return '';
 }
 
-$errors .= sanitizePostTitle('subject', 'Please set a valid Subject.');
+$errors .= sanitizePostTitle('subject', 'Por favor, establezca un posición');
 
 // Continue if NO errors found after validation
 if (!$errors) {	
@@ -126,7 +126,6 @@ if (!$errors) {
 	// Customer Details
 	$customer_name = $_POST['username'];
 	$customer_mail = $_POST['email'];
-	$customer_phone = $_POST['phone'];	
 	$customer_subject = $_POST['subject'];
 	$customer_message = $_POST['message'];
 
@@ -136,7 +135,7 @@ if (!$errors) {
 	try {
 
     	// Recipients
-    	$mail->setFrom('aneudysq@gmail.com', 'Body Shop Talent');                				// Set Sender    	
+    	$mail->setFrom('a.saldana@clubbodyshop.com', 'Body Shop Talent');                				// Set Sender    	
 		$mail->addAddress('aneudysq@outlook.com', 'Body Shop Talent'); 	// Set Recipients		
     	$mail->addReplyTo('a.saldana@clubbodyshop.com', 'Body Shop Talent');          					// Set Reply-to Address
     	$mail->isHTML(true);                                                       
@@ -201,7 +200,7 @@ if (!$errors) {
 	// Success Page
 	echo '<div id="success">';
 	echo '<div class="icon icon-order-success svg">';
-	echo '<svg width="150px" height="150px">';
+	echo '<svg width="72px" height="72px">';
 	echo '<g fill="none" stroke="#53c4da" stroke-width="2">';
 	echo '<circle cx="36" cy="36" r="35" style="stroke-dasharray:240px, 240px; stroke-dashoffset: 480px;"></circle>';
 	echo '<path d="M17.417,37.778l9.93,9.909l25.444-25.393" style="stroke-dasharray:50px, 50px; stroke-dashoffset: 0px;"></path>';
@@ -212,7 +211,7 @@ if (!$errors) {
 			Tu mensaje ha sido enviado. </h4>';
 	echo '<small>Revisa tu correo.</small>';
 	echo '</div>';
-	echo '<script src="formulario/js/redirect.js"></script>';
+	echo '<script src="js/redirect.js"></script>';
 
 } else {
 
