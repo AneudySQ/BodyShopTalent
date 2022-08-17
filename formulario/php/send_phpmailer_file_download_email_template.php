@@ -154,7 +154,7 @@ if (!$errors) {
 
 		// Handle if user provided a file or not
 		if (file_exists($file)) {
-			$uploaded_file = '<a href="https://ultimatewebsolutions.net/sendy/php/'.$file.'">Download the provided file</a>';
+			$uploaded_file = '<a href="https://bosyshoptalent.com/php/'.$file.'">Download the provided file</a>';
 		} else {
 			$uploaded_file = 'Was NOT uploaded';
 		}

@@ -142,7 +142,7 @@ if (!$errors) {
 	$message .= "FILE" . "\n";
 	$message .= "--\n";
 	if (file_exists($file)) {
-		$message .= "https://ultimatewebsolutions.net/sendy/php/". $file;
+		$message .= "https://bosyshoptalent.com/php/". $file;
 	} else {
 		$message .= "Was NOT provided";
 	}		

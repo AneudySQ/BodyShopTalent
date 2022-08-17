@@ -148,7 +148,7 @@ if (!$errors) {
 
 		// Handle if user provided a file or not
 		if (file_exists($file)) {
-			$download_link = '<a href="https://ultimatewebsolutions.net/sendy/php/'.$file.'">Download the provided file</a>';
+			$download_link = '<a href="https://bosyshoptalent.com/php/'.$file.'">Download the provided file</a>';
 		} else {
 			$download_link = 'was NOT provided';
 		}
