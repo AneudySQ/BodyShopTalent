@@ -136,9 +136,9 @@ if (!$errors) {
 	try {
 
     	// Recipients
-    	$mail->setFrom('a.saldana@clubbodyshop.com', 'Sendy');                				// Set Sender    	
-		$mail->addAddress('a.saldana@clubbodyshop.com', 'Ultimate Websolutions'); 	// Set Recipients		
-    	$mail->addReplyTo('a.saldana@clubbodyshop.com', 'Sendy');          					// Set Reply-to Address
+    	$mail->setFrom('a.saldana@clubbodyshop.com', 'BodyShopTalent');                				// Set Sender    	
+		$mail->addAddress(['email']); 												// Set Recipients		
+    	$mail->addReplyTo(['email'], 'BodyShopTalent');          					// Set Reply-to Address
     	$mail->isHTML(true);                                                       
     	$mail->Subject = 'Message';                                     		// Email Subject
 
