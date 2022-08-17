@@ -10,7 +10,7 @@
 	<title>Sendy | Advanced Contact Form</title>
 
 	<!-- Favicon -->
-	<link href="../img/favicon.png" rel="shortcut icon">
+   <link rel="shortcut icon" href="images/favicon-32x32.png">
 
 	<!-- Google Fonts - Poppins, Karla -->
 	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
@@ -129,7 +129,7 @@ if (!$errors) {
 	try {
 
     	// Recipients
-    	$mail->setFrom('aneudysq@outlook.com', 'Sendy');                				// Set Sender    	
+    	$mail->setFrom('a.saldana@clubbodyshop.com', 'Sendy');                				// Set Sender    	
 		$mail->addAddress('aneudysq@gmail.com', 'Ultimate Websolutions'); 	// Set Recipients		
     	$mail->addReplyTo('a.saldana@clubbodyshop.com', 'Sendy');          					// Set Reply-to Address
     	$mail->isHTML(true);                                                       
@@ -212,7 +212,7 @@ if (!$errors) {
 	echo '<h4>Gracias por contactar <br> con nosotros.</h4>';
 	echo '<small>Revisa tu correo.</small>';
 	echo '</div>';
-	echo '<script src="/j../redirect.js"></script>';
+	echo '<script src="/../redirect.js"></script>';
 
 } else {
 
