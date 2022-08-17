@@ -208,8 +208,9 @@ if (!$errors) {
 	echo '</g>';
 	echo '</svg>';
 	echo '</div>';    
-	echo '<h4>Thank you for contacting us.</h4>';
-	echo '<small>Check your mailbox.</small>';
+	echo '<h4>Muchas gracias,
+			Tu mensaje ha sido enviado. </h4>';
+	echo '<small>Revisa tu correo.</small>';
 	echo '</div>';
 	echo '<script src="../js/redirect.js"></script>';
 
