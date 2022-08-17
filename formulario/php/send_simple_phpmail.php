@@ -180,7 +180,7 @@ if (!$errors) {
 	echo '<div style="color: #e9431c">' . $errors . '</div>';
 	echo '<div id="success">';    
 	echo '<h4>Something went wrong.</h4>';
-	echo '<a class="animated-link" href="../index.html">Go Back</small>';
+	echo '<a class="animated-link" href="../index.html">Regresa</small>';
 	echo '</div>';	
 }
 
