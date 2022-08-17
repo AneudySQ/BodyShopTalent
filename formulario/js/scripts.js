@@ -126,7 +126,7 @@
 		maxFileSize: '2MB',
 
 		// Allowed file types
-		acceptedFileTypes: ['image/png', 'image/jpeg', 'application/pdf'],
+		acceptedFileTypes: ['image/png', 'image/jpeg', 'application/pdf', 'application/pdf'],
 
 		// Upload to this server end point
 		server: 'php/'
