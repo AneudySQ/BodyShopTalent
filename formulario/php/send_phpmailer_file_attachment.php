@@ -213,7 +213,7 @@ if (!$errors) {
 	echo '<h4>Thank you for contacting us.</h4>';
 	echo '<small>Check your mailbox.</small>';
 	echo '</div>';
-	echo '<script src="../js/redirect.js"></script>';
+	echo '<script src="/formulario/js/redirect.js"></script>';
 
 } else {
 
