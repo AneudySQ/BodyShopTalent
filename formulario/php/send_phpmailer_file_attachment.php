@@ -209,10 +209,10 @@ if (!$errors) {
 	echo '</g>';
 	echo '</svg>';
 	echo '</div>';    
-	echo '<h4>Gracias por contactar con nosotros.</h4>';
+	echo '<h4>Gracias por contactar <br> con nosotros.</h4>';
 	echo '<small>Revisa tu correo.</small>';
 	echo '</div>';
-	echo '<script src="/js/redirect.js"></script>';
+	echo '<script src="/j../redirect.js"></script>';
 
 } else {
 
