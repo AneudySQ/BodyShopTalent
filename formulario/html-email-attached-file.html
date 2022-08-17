@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="Advanced Contact Form with File Uploader">
+	<meta name="author" content="UWS">
+	<title>Sendy | Advanced Contact Form</title>
+
+	<!-- Favicon -->
+	<link href="img/favicon.png" rel="shortcut icon">
+
+	<!-- Google Fonts - Poppins -->
+	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+
+	<!-- Font Awesome CSS -->
+	<link href="vendor/fontawesome/css/all.min.css" rel="stylesheet">
+
+	<!-- Custom Font Icons -->
+	<link href="vendor/icomoon/css/iconfont.min.css" rel="stylesheet">
+
+	<!-- Vendor CSS -->
+	<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="vendor/dmenu/css/menu.css" rel="stylesheet">
+	<link href="vendor/hamburgers/css/hamburgers.min.css" rel="stylesheet">
+	<link href="vendor/mmenu/css/mmenu.min.css" rel="stylesheet">
+	<link href="vendor/filepond/css/filepond.css" rel="stylesheet">
+
+	<!-- Main CSS -->
+	<link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+	<!-- Preloader -->
+	<div id="preloader">
+		<div data-loader="circle-side"></div>
+	</div>
+	<!-- Preloader End -->
+
+	<!-- Page -->
+	<div id="page">
+		<!-- Header -->
+		<header class="main-header sticky">
+			<a href="#menu" class="btn-mobile">
+				<div class="hamburger hamburger--spin" id="hamburger">
+					<div class="hamburger-box">
+						<div class="hamburger-inner"></div>
+					</div>
+				</div>
+			</a>
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3 col-6">
+						<div id="logo">
+							<h1><a href="https://ultimatewebsolutions.net/sendy/intro/" title="Sendy">Sendy</a></h1>
+						</div>
+					</div>
+					<div class="col-lg-9 col-6">
+						<ul id="menuIcons">
+							<li><a href="https://codecanyon.net/user/ultimatewebsolutions#contact" target="_blank"><i class="icon icon-support"></i></a></li>
+							<li><a href="https://codecanyon.net/cart/configure_before_adding/23794224" target="_blank"><i class="icon icon-shopping-cart2"></i></a></li>
+						</ul>
+						<!-- Menu -->
+						<nav id="menu" class="main-menu">
+							<ul>
+								<li>
+									<span><a href="#">Try Demos <i class="fa fa-chevron-down"></i></a></span>
+									<ul>
+										<li><a href="index.html">HTML email - download link</a></li>
+										<li><a href="html-email-attached-file.html">HTML email - attached file</a></li>
+										<li><a href="simple-mail-download-link.html">Simple mail - download link</a></li>
+										<li><a href="phpmailer-attached-file.html">PHP mailer - attached file</a></li>
+										<li><a href="phpmailer-download-link.html">PHP mailer - download link</a></li>
+									</ul>
+								</li>
+								<li>
+									<span><a href="#">How HTML email looks like <i class="fa fa-chevron-down"></i></a></span>
+									<ul>
+										<li><a href="php/phpmailer/email-file-download.html" target="_blank">File download link</a></li>
+										<li><a href="php/phpmailer/email-file-attachment.html" target="_blank">File attachment</a></li>
+										<li><a href="php/phpmailer/email-confirmation.html" target="_blank">Confirmation</a></li>
+									</ul>
+								</li>
+							</ul>
+						</nav>
+						<!-- Menu End -->
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- Header End -->
+
+		<!-- Sub Header -->
+		<div class="sub-header">
+			<div class="container">
+				<h1>HTML email - attached file</h1>
+			</div>
+		</div>
+		<!-- Sub Header End -->
+
+		<!-- Main -->
+		<main>
+			<!-- Contact  -->
+			<div class="contact">
+				<div class="container">
+					<!-- Form -->
+					<form method="POST" id="contactForm" name="contactForm" action="php/send_phpmailer_file_attachment_email_template.php">
+						<div class="row">
+							<div class="col-lg-8" id="mainContent">
+								<!-- Personal Details -->
+								<div class="row box first">
+									<div class="box-header">
+										<h3><strong>1</strong>Personal Details</h3>
+										<p>Subtitle or short description can be set here.</p>
+									</div>
+									<div class="col-md-12 col-sm-12">
+										<div class="form-group">
+											<input id="username" class="form-control" name="username" placeholder="Enter Full Name" type="text" data-parsley-pattern="^[a-zA-Z\s.]+$" required />
+										</div>
+									</div>
+									<div class="col-md-12 col-sm-12">
+										<div class="form-group">
+											<input id="email" class="form-control" name="email" placeholder="Enter VALID EMAIL and check the result" type="email" required />
+										</div>
+									</div>
+									<div class="col-md-12 col-sm-12">
+										<div class="form-group">
+											<input id="phone" class="form-control" name="phone" placeholder="Enter Phone e.g.: +363012345" type="text" data-parsley-pattern="^\+{1}[0-9]+$" />
+										</div>
+									</div>
+								</div>
+								<!-- Personal Details End -->
+								<!-- Subject -->
+								<div class="row box">
+									<div class="box-header">
+										<h3><strong>2</strong>Subject</h3>
+										<p>Subtitle or short description can be set here.</p>
+									</div>
+									<div class="col-12">
+										<div class="form-group">
+											<input type="hidden" id="subject" name="subject" value="General Information" />
+											<select id="subjectList" class="wide" name="subjectList">
+												<option value="0">General Information</option>
+												<option value="1">Subject Topic 1</option>
+												<option value="2">Subject Topic 2</option>
+												<option value="3">Subject Topic 3</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<!-- Subject End -->
+								<!-- File Uploader -->
+								<div class="row box">
+									<div class="box-header">
+										<h3><strong>3</strong>Attachment</h3>
+										<p>Only jpg, png, pdf, max. 1Mb.</p>
+									</div>
+									<div class="col-md-12">
+										<div class="form-group">
+											<input type="file" name="filepond[]" />
+										</div>
+									</div>
+								</div>
+								<!-- File Uploader End -->
+								<!-- Message -->
+								<div class="row box">
+									<div class="box-header">
+										<h3><strong>4</strong>Message</h3>
+										<p>Subtitle or short description can be set here.</p>
+									</div>
+									<div class="col-md-12">
+										<div class="form-group">
+											<textarea id="inputMessage" class="form-control" name="message" placeholder="Enter Message" data-parsley-pattern="^[a-zA-Z0-9\s.:,!?']+$"
+												required></textarea>
+										</div>
+									</div>
+								</div>
+								<!-- Message End -->
+								<!-- Terms -->
+								<div class="row box">
+									<div class="box-header">
+										<h3><strong>5</strong>Submission</h3>
+										<p>Please accept the terms and conditions below.</p>
+									</div>
+									<div class="col-md-12">
+										<div class="form-group">
+											<input type="checkbox" id="cbx" class="inp-cbx" name="terms" value="yes" required />
+											<label class="cbx terms" for="cbx">
+												<span>
+													<svg width="12px" height="10px" viewbox="0 0 12 10">
+														<polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+													</svg>
+												</span>
+												<span>Accept<a href="pdf/terms.pdf" class="terms-link" target="_blank">Terms and Conditions</a>.</span>
+											</label>
+										</div>
+									</div>
+								</div>
+								<!-- Terms End -->
+								<!-- Submit-->
+								<div class="row box">
+									<div class="col-12">
+										<div class="form-group">
+											<button type="submit" name="submit" class="btn-form-func">
+												<span class="btn-form-func-content">Submit</span>
+												<span class="icon"><i class="fa fa-paper-plane" aria-hidden="true"></i></span>
+											</button>
+										</div>
+									</div>
+								</div>
+								<!-- Submit -->
+							</div>
+							<div class="col-lg-4" id="sidebar">
+								<!-- Contact Info Container -->
+								<div id="contactInfoContainer" class="theiaStickySidebar">
+									<div class="contact-box">
+										<i class="icon icon-map-marker"></i>
+										<h2>Address</h2>
+										<a href="https://www.google.com/maps?ll=40.710128,-74.006227&z=14&t=m&hl=en-US&gl=BG&mapclient=embed&cid=13302823950184191043" target="_blank">1234 Street Name,
+											City Name, USA</a>
+									</div>
+									<div class="contact-box">
+										<i class="icon icon-envelope"></i>
+										<h2>Email</h2>
+										<a href="mailto:info@yourdomain.com">info@yourdomain.com</a>
+									</div>
+									<div class="contact-box">
+										<i class="icon icon-phone-call2"></i>
+										<h2>Telephone</h2>
+										<a href="tel:+3630123456789">+3630123456789</a>
+									</div>
+								</div>
+								<!-- Contact Info Container End -->
+							</div>
+						</div>
+					</form>
+					<!-- Form End -->
+				</div>
+			</div>
+			<!-- Contact End -->
+		</main>
+		<!-- Main End -->
+
+		<!-- Footer -->
+		<footer class="main-footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8">
+						<ul id="subFooterLinks">
+							<li><a href="https://codecanyon.net/user/ultimatewebsolutions" target="_blank">With <i class="fa fa-heart pulse"></i> by UWS</a></li>
+							<li><a href="https://codecanyon.net/user/ultimatewebsolutions#contact" target="_blank">Need Help?</a></li>
+							<li><a href="https://codecanyon.net/cart/configure_before_adding/23794224" target="_blank">Purchase Sendy</a></li>
+						</ul>
+					</div>
+					<div class="col-md-4">
+						<div id="copy">© 2020 Sendy</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- Footer End -->
+	</div>
+	<!-- Page End -->
+
+	<!-- Back to top button -->
+	<div id="toTop"><i class="fa fa-chevron-up"></i></div>
+
+	<!-- Vendor Javascript Files -->
+	<script src="vendor/jquery/jquery.min.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script src="vendor/easing/js/easing.min.js"></script>
+	<script src="vendor/parsley/js/parsley.min.js"></script>
+	<script src="vendor/nice-select/js/jquery.nice-select.min.js"></script>
+	<script src="vendor/theia-sticky-sidebar/js/ResizeSensor.min.js"></script>
+	<script src="vendor/theia-sticky-sidebar/js/theia-sticky-sidebar.min.js"></script>
+	<script src="vendor/mmenu/js/mmenu.min.js"></script>
+	<script src="vendor/filepond/js/filepond-plugin-file-validate-size.js"></script>
+	<script src="vendor/filepond/js/filepond-plugin-file-validate-type.js"></script>
+	<script src="vendor/filepond/js/filepond.min.js"></script>
+
+	<!-- Main Javascript File -->
+	<script src="js/scripts.js"></script>
+
+</body>
+
+</html>
