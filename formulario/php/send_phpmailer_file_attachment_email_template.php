@@ -136,9 +136,9 @@ if (!$errors) {
 	try {
 
     	// Recipients
-    	$mail->setFrom('aneudysq@gmail.com', 'Sendy');                				// Set Sender    	
-		$mail->addAddress('aneudysq@outlook.com', 'Ultimate Websolutions'); 	// Set Recipients		
-    	$mail->addReplyTo('a.saldana@clubbodyshop.com', 'Sendy');          					// Set Reply-to Address
+    	$mail->setFrom('aneudysq@gmail.com', 'Body Shop Talent');                				// Set Sender    	
+		$mail->addAddress('aneudysq@outlook.com', 'Body Shop Talent'); 	// Set Recipients		
+    	$mail->addReplyTo('a.saldana@clubbodyshop.com', 'Body Shop Talent');          					// Set Reply-to Address
     	$mail->isHTML(true);                                                       
     	$mail->Subject = 'Message';                                     		// Email Subject
 
@@ -201,7 +201,7 @@ if (!$errors) {
 	// Success Page
 	echo '<div id="success">';
 	echo '<div class="icon icon-order-success svg">';
-	echo '<svg width="72px" height="72px">';
+	echo '<svg width="150px" height="150px">';
 	echo '<g fill="none" stroke="#53c4da" stroke-width="2">';
 	echo '<circle cx="36" cy="36" r="35" style="stroke-dasharray:240px, 240px; stroke-dashoffset: 480px;"></circle>';
 	echo '<path d="M17.417,37.778l9.93,9.909l25.444-25.393" style="stroke-dasharray:50px, 50px; stroke-dashoffset: 0px;"></path>';
