@@ -44,8 +44,8 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require 'phpmailer/src/Exception.php';
-require 'phpmailer/src/PHPMailer.php';
+require '/formulario/php/phpmailer/src/Exception.php';
+require '/formulario/php/phpmailer/src/PHPMailer.php';
 
 $mail = new PHPMailer(true);
 
@@ -59,12 +59,12 @@ if ($_POST['username'] != '') {
 	$_POST['username'] = filter_var($_POST['username'], FILTER_SANITIZE_STRING);
 
 	if ($_POST['username'] == '') {
-		$errors .= 'Please enter a valid name.<br/>';
+		$errors .= 'Por favor ingrese un nombre valido.<br/>';
 	}
 }
 else { 
 	// Required to fill
-	$errors .= 'Please enter your name.<br/>';
+	$errors .= 'Por favor, escriba su nombre.<br/>';
 }
 
 // Email 
@@ -82,7 +82,7 @@ if ($_POST['email'] != '') {
 }
 else {
 	// Required to fill
-	$errors .= 'Please enter your email address.<br/>';
+	$errors .= 'Por favor, introduzca su dirección de correo electrónico.<br/>';
 }
 
 // Phone 
@@ -92,7 +92,7 @@ if ($_POST['phone'] != '') {
 	$_POST['phone'] = filter_var($_POST['phone'], FILTER_SANITIZE_STRING);
 
 	// After sanitization validation is performed
-	$pattern_phone = array('options'=>array('regexp'=>'/^\+{1}[0-9]+$/'));
+	$pattern_phone = array('options'=>array('regexp'=>'/^\+{1}[0-9]/'));
 	$_POST['phone'] = filter_var($_POST['phone'], FILTER_VALIDATE_REGEXP, $pattern_phone);
 	
 	if($_POST['phone'] == '') {
@@ -129,9 +129,9 @@ if (!$errors) {
 	try {
 
     	// Recipients
-    	$mail->setFrom('a.saldana@clubbodyshop.com', 'Sendy');                				// Set Sender    	
+    	$mail->setFrom('a.saldana@clubbodyshop.com', 'Body Shop Talent');                				// Set Sender    	
 		$mail->addAddress('aneudysq@gmail.com', 'Ultimate Websolutions'); 	// Set Recipients		
-    	$mail->addReplyTo('a.saldana@clubbodyshop.com', 'Sendy');          					// Set Reply-to Address
+    	$mail->addReplyTo(['email']);          						// Set Reply-to Address
     	$mail->isHTML(true);                                                       
     	$mail->Subject = 'Message';                                     		// Email Subject
 
@@ -157,12 +157,12 @@ if (!$errors) {
     	// Content
     	$mail->isHTML(true);
 		$mail->Body    = '<strong>El mensaje llegó con los siguientes detalles.</strong> ' . '<br /><br />' .
-		'<strong>Name:</strong> ' . $_POST['username'] . '<br />' .		
-		'<strong>Email:</strong> ' . $_POST['email'] . '<br />' .
-		'<strong>Phone:</strong> ' . $_POST['phone'] . '<br />' .
-		'<strong>Subject:</strong> ' . $_POST['subject'] . '<br /><br />' .
-		'<strong>Message:</strong> '. '<br />' . $_POST['message'] . '<br /><br />' . 
-		'<strong>File:</strong> ' . $file_attachment;
+		'<strong>Nombre:</strong> ' . $_POST['username'] . '<br />' .		
+		'<strong>Correo:</strong> ' . $_POST['email'] . '<br />' .
+		'<strong>Teléfono:</strong> ' . $_POST['phone'] . '<br />' .
+		'<strong>Posición:</strong> ' . $_POST['subject'] . '<br /><br />' .
+		'<strong>Argumento:</strong> '. '<br />' . $_POST['message'] . '<br /><br />' . 
+		'<strong>Archivo:</strong> ' . $file_attachment;
 		
 		// Send to site owner
 		$mail->Send();
