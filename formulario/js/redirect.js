@@ -1,4 +1,4 @@
 // Redirect
 function delayedRedirect() {
-    window.location = 'https://bodyshoptalent.com/'
+    window.location.href = "https://www.bodyshoptalent.com"; 
 }

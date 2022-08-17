@@ -156,7 +156,7 @@ if (!$errors) {
 
     	// Content
     	$mail->isHTML(true);
-		$mail->Body    = '<strong>Message arrived via Sendy with the following details.</strong> ' . '<br /><br />' .
+		$mail->Body    = '<strong>El mensaje llegó con los siguientes detalles.</strong> ' . '<br /><br />' .
 		'<strong>Name:</strong> ' . $_POST['username'] . '<br />' .		
 		'<strong>Email:</strong> ' . $_POST['email'] . '<br />' .
 		'<strong>Phone:</strong> ' . $_POST['phone'] . '<br />' .
@@ -172,11 +172,10 @@ if (!$errors) {
 		$mail->clearAttachments();
 		$mail->addAddress($_POST['email']); // Email address entered on the form by the visitor
 		$mail->isHTML(true);
-		$mail->Subject    = 'Confirmation';
-		$mail->Body    = 'Dear<strong> ' . $_POST['username'] . '</strong>,<br /><br />' . 
-		'We got your message. Thank you for contacting us. We will reply shortly.<br /><br />' .
-		'Kind Regards,<br />' .
-		'Sendy Team';
+		$mail->Subject    = 'Confirmación';
+		$mail->Body    = '<strong> ' . $_POST['username'] . '</strong>,<br /><br />' . 
+		'Recibimos tu mensaje. Gracias por contactarnos.<br /><br />' .
+		'Body Shop';
 
 		// Send to who filled the form
 		$mail->send();
@@ -210,18 +209,18 @@ if (!$errors) {
 	echo '</g>';
 	echo '</svg>';
 	echo '</div>';    
-	echo '<h4>Thank you for contacting us.</h4>';
-	echo '<small>Check your mailbox.</small>';
+	echo '<h4>Gracias por contactar con nosotros.</h4>';
+	echo '<small>Revisa tu correo.</small>';
 	echo '</div>';
-	echo '<script src="/formulario/js/redirect.js"></script>';
+	echo '<script src="/js/redirect.js"></script>';
 
 } else {
 
 	// Error Page
 	echo '<div style="color: #e9431c">' . $errors . '</div>';
 	echo '<div id="success">';    
-	echo '<h4>Something went wrong.</h4>';
-	echo '<a class="animated-link" href="../index.html">Go Back</small>';
+	echo '<h4>Algo salió mal.</h4>';
+	echo '<a class="animated-link" href="./formulario.html">Ir al formulario</small>';
 	echo '</div>';	
 }
 
