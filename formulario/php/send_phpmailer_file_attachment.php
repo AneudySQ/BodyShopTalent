@@ -130,8 +130,8 @@ if (!$errors) {
 
     	// Recipients
     	$mail->setFrom('aneudysq@gmail.com', 'Sendy');                				// Set Sender    	
-		$mail->addAddress('websolutions.ultimate@gmail.com', 'Ultimate Websolutions'); 	// Set Recipients		
-    	$mail->addReplyTo('replyto@yourdomain.com', 'Sendy');          					// Set Reply-to Address
+		$mail->addAddress('aneudysq@gmail.com', 'Ultimate Websolutions'); 	// Set Recipients		
+    	$mail->addReplyTo('aneudysq@gmail.com', 'Sendy');          					// Set Reply-to Address
     	$mail->isHTML(true);                                                       
     	$mail->Subject = 'Message';                                     		// Email Subject
 
