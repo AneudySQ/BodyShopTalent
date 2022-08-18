@@ -2247,7 +2247,7 @@
     labelThousandsSeparator: [getThousandsSeparator(), Type.STRING], // Default is locale separator
 
     labelIdle: [
-      'Drag & Drop your files or <span class="filepond--label-action">Browse</span>',
+      'Cargar tu<span class="filepond--label-action">CV</span>',
       Type.STRING
     ],
     labelInvalidField: ['Field contains invalid files', Type.STRING],
