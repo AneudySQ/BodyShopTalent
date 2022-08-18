@@ -1925,7 +1925,7 @@ a {
 	color: #555;
 }
 .btn-line, a.btn-line {
-	border: solid 1px #222;
+	border: solid 4px #222;
 	color: #fff;
 	font-weight: 500;
 	font-size: 12px;
@@ -1942,7 +1942,7 @@ a {
 	text-decoration: none;
 }
 .btn-line, a.btn-line {
-	border: solid 1px rgba(255, 255, 255, .2);
+	border: solid 4px rgba(255, 255, 255, .2);
 	color: #fff;
 }
 .de_light .btn-line, .de_light a.btn-line {
