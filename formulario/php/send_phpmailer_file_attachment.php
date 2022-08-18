@@ -129,11 +129,11 @@ if (!$errors) {
 	try {
 
     	// Recipients
-    	$mail->setFrom('aneudysq@gmail.com', 'Bodyshop');                				// Set Sender    	
+    	$mail->setFrom('aneudysq@gmail.com', 'Bodyshop');                				// Este es el correo del usuario	
 		$mail->addAddress('websolutions.ultimate@gmail.com', 'Ultimate Websolutions'); 	// Set Recipients		
-    	$mail->addReplyTo('a.saldana@clubbodyshop.com', 'Body Shop Talent');          					// Set Reply-to Address
+    	$mail->addReplyTo('a.saldana@clubbodyshop.com', 'Body Shop Talent');          					// Aqui es donde van a llegar
     	$mail->isHTML(true);                                                       
-    	$mail->Subject = 'Message';                                     		// Email Subject
+    	$mail->Subject = 'Mensaje';                                     		// Email Subject
 
 		// Add the uploaded file in attachment if exists		
 		$tmp_dirs = [];
