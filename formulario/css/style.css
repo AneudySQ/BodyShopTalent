@@ -344,11 +344,14 @@ ul#menuIcons li a:hover {
 }
 
 .sub-header h1 {
-    color: #fff;
+    color: rgb(0, 0, 0);
     margin: 0;
 	font-size: 24px;
-	font-weight: 500;
-	text-transform:uppercase
+	font-weight: 300;
+	text-transform:uppercase;
+	font-family:"Montserrat";
+	font-weight: bold;
+
 }
 
 /* Footer
