@@ -7,10 +7,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="description" content="Advanced Contact Form with File Uploader">
 	<meta name="author" content="UWS">
-	<title>Sendy | Advanced Contact Form</title>
+	<title>ody Shop Talent</title>
 
 	<!-- Favicon -->
-	<link href="../img/favicon.png" rel="shortcut icon">
+	<link href="../images/favicon-32x32.png" rel="shortcut icon">
 
 	<!-- Google Fonts - Poppins, Karla -->
 	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
@@ -156,13 +156,13 @@ if (!$errors) {
 
     	// Content
     	$mail->isHTML(true);
-		$mail->Body    = '<strong>Message arrived via Sendy with the following details.</strong> ' . '<br /><br />' .
-		'<strong>Name:</strong> ' . $_POST['username'] . '<br />' .		
-		'<strong>Email:</strong> ' . $_POST['email'] . '<br />' .
-		'<strong>Phone:</strong> ' . $_POST['phone'] . '<br />' .
-		'<strong>Subject:</strong> ' . $_POST['subject'] . '<br /><br />' .
-		'<strong>Message:</strong> '. '<br />' . $_POST['message'] . '<br /><br />' . 
-		'<strong>File:</strong> ' . $file_attachment;
+		$mail->Body    = '<strong>El mensaje llego correctamente.</strong> ' . '<br /><br />' .
+		'<strong>Nombre:</strong> ' . $_POST['username'] . '<br />' .		
+		'<strong>Correo:</strong> ' . $_POST['email'] . '<br />' .
+		'<strong>Telefono:</strong> ' . $_POST['phone'] . '<br />' .
+		'<strong>Posicion:</strong> ' . $_POST['subject'] . '<br /><br />' .
+		'<strong>Mensaje</strong> '. '<br />' . $_POST['message'] . '<br /><br />' . 
+		'<strong>CV:</strong> ' . $file_attachment;
 		
 		// Send to site owner
 		$mail->Send();
@@ -172,11 +172,11 @@ if (!$errors) {
 		$mail->clearAttachments();
 		$mail->addAddress($_POST['email']); // Email address entered on the form by the visitor
 		$mail->isHTML(true);
-		$mail->Subject    = 'Confirmation';
-		$mail->Body    = 'Dear<strong> ' . $_POST['username'] . '</strong>,<br /><br />' . 
-		'We got your message. Thank you for contacting us. We will reply shortly.<br /><br />' .
-		'Kind Regards,<br />' .
-		'Sendy Team';
+		$mail->Subject    = 'Confirmación'
+		$mail->Body    = '<strong> ' . $_POST['username'] . '</strong>,<br /><br />' . 
+		'Recibimos tu mensaje. Gracias por contactarnos. Responderemos en breve.<br /><br />' .
+		'<br />' .
+		'Body Shop;
 
 		// Send to who filled the form
 		$mail->send();
@@ -210,8 +210,8 @@ if (!$errors) {
 	echo '</g>';
 	echo '</svg>';
 	echo '</div>';    
-	echo '<h4>Thank you for contacting us.</h4>';
-	echo '<small>Check your mailbox.</small>';
+	echo '<h4>Gracias por contactarno.</h4>';
+	echo '<small>Revisa tu correo.</small>';
 	echo '</div>';
 	echo '<script src="../js/redirect.js"></script>';
 
