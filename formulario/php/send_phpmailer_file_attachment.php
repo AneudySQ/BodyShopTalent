@@ -77,7 +77,7 @@ if ($_POST['email'] != '') {
 	$_POST['email'] = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
 	
 	if($_POST['email'] == '') {
-		$errors .= 'Please enter a valid email address.<br/>';
+		$errors .= 'Por favor, introduce una dirección de correo electrónico válida.<br/>';
 	}
 }
 else {
@@ -92,7 +92,7 @@ if ($_POST['phone'] != '') {
 	$_POST['phone'] = filter_var($_POST['phone'], FILTER_SANITIZE_STRING);
 
 	// After sanitization validation is performed
-	$pattern_phone = array('options'=>array('regexp'=>'/^\+{1}[0-9]+$/'));
+	$pattern_phone = array('options'=>array('regexp'=>'/^\[0-9]/'));
 	$_POST['phone'] = filter_var($_POST['phone'], FILTER_VALIDATE_REGEXP, $pattern_phone);
 	
 	if($_POST['phone'] == '') {
