@@ -92,11 +92,11 @@ if ($_POST['phone'] != '') {
 	$_POST['phone'] = filter_var($_POST['phone'], FILTER_SANITIZE_STRING);
 
 	// After sanitization validation is performed
-	$pattern_phone = array('options'=>array('regexp'=>'/^\+{1}[0-9]+$/'));
+	$pattern_phone = array('options'=>array('regexp'=>'/^\[0-9]/'));
 	$_POST['phone'] = filter_var($_POST['phone'], FILTER_VALIDATE_REGEXP, $pattern_phone);
 	
 	if($_POST['phone'] == '') {
-		$errors .= 'Please enter a valid phone number like: +363012345<br/>';
+		$errors .= 'Por favor ingrese un número de teléfono válido like: +363012345<br/>';
 	}
 }
 
@@ -118,7 +118,7 @@ function sanitizePostTitle($postName, $invalidMessage) {
 	return '';
 }
 
-$errors .= sanitizePostTitle('subject', 'Please set a valid Subject.');
+$errors .= sanitizePostTitle('subject', 'Por favor, elegir una posición..');
 
 // Continue if NO errors found after validation
 if (!$errors) {	
