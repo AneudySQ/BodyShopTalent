@@ -7,10 +7,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="description" content="Advanced Contact Form with File Uploader">
 	<meta name="author" content="UWS">
-	<title>ody Shop Talent</title>
+	<title>BodyShopTalent | Advanced Contact Form</title>
 
 	<!-- Favicon -->
-	<link href="../images/favicon-32x32.png" rel="shortcut icon">
+	<link href="../img/favicon.png" rel="shortcut icon">
 
 	<!-- Google Fonts - Poppins, Karla -->
 	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
@@ -77,7 +77,7 @@ if ($_POST['email'] != '') {
 	$_POST['email'] = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
 	
 	if($_POST['email'] == '') {
-		$errors .= 'Por favor, introduce una dirección de correo electrónico válida.<br/>';
+		$errors .= 'Please enter a valid email address.<br/>';
 	}
 }
 else {
@@ -92,11 +92,11 @@ if ($_POST['phone'] != '') {
 	$_POST['phone'] = filter_var($_POST['phone'], FILTER_SANITIZE_STRING);
 
 	// After sanitization validation is performed
-	$pattern_phone = array('options'=>array('regexp'=>'/[0-9]/'));
+	$pattern_phone = array('options'=>array('regexp'=>'/^\+{1}[0-9]+$/'));
 	$_POST['phone'] = filter_var($_POST['phone'], FILTER_VALIDATE_REGEXP, $pattern_phone);
 	
 	if($_POST['phone'] == '') {
-		$errors .= 'Por favor ingrese un número de teléfono válido like: +363012345<br/>';
+		$errors .= 'Please enter a valid phone number like: +363012345<br/>';
 	}
 }
 
@@ -118,7 +118,7 @@ function sanitizePostTitle($postName, $invalidMessage) {
 	return '';
 }
 
-$errors .= sanitizePostTitle('subject', 'Por favor, elegir una posición..');
+$errors .= sanitizePostTitle('subject', 'Please set a valid Subject.');
 
 // Continue if NO errors found after validation
 if (!$errors) {	
@@ -129,11 +129,11 @@ if (!$errors) {
 	try {
 
     	// Recipients
-    	$mail->setFrom('aneudysq@gmail.com', 'Bodyshop');                				// Este es el correo del usuario	
+    	$mail->setFrom('aneudysq@outlook.com', 'BodyShopTalent');                				// Set Sender    	
 		$mail->addAddress('websolutions.ultimate@gmail.com', 'Ultimate Websolutions'); 	// Set Recipients		
-    	$mail->addReplyTo('a.saldana@clubbodyshop.com', 'Body Shop Talent');          					// Aqui es donde van a llegar
+    	$mail->addReplyTo('a.saldana@clubbodyshop.com', 'BodyShopTalent');          					// Set Reply-to Address
     	$mail->isHTML(true);                                                       
-    	$mail->Subject = 'Mensaje';                                     		// Email Subject
+    	$mail->Subject = 'Message';                                     		// Email Subject
 
 		// Add the uploaded file in attachment if exists		
 		$tmp_dirs = [];
@@ -156,13 +156,13 @@ if (!$errors) {
 
     	// Content
     	$mail->isHTML(true);
-		$mail->Body    = '<strong>El mensaje llego correctamente.</strong> ' . '<br /><br />' .
-		'<strong>Nombre:</strong> ' . $_POST['username'] . '<br />' .		
-		'<strong>Correo:</strong> ' . $_POST['email'] . '<br />' .
-		'<strong>Telefono:</strong> ' . $_POST['phone'] . '<br />' .
-		'<strong>Posicion:</strong> ' . $_POST['subject'] . '<br /><br />' .
-		'<strong>Mensaje</strong> '. '<br />' . $_POST['message'] . '<br /><br />' . 
-		'<strong>CV:</strong> ' . $file_attachment;
+		$mail->Body    = '<strong>Message arrived via BodyShopTalent with the following details.</strong> ' . '<br /><br />' .
+		'<strong>Name:</strong> ' . $_POST['username'] . '<br />' .		
+		'<strong>Email:</strong> ' . $_POST['email'] . '<br />' .
+		'<strong>Phone:</strong> ' . $_POST['phone'] . '<br />' .
+		'<strong>Subject:</strong> ' . $_POST['subject'] . '<br /><br />' .
+		'<strong>Message:</strong> '. '<br />' . $_POST['message'] . '<br /><br />' . 
+		'<strong>File:</strong> ' . $file_attachment;
 		
 		// Send to site owner
 		$mail->Send();
@@ -172,11 +172,11 @@ if (!$errors) {
 		$mail->clearAttachments();
 		$mail->addAddress($_POST['email']); // Email address entered on the form by the visitor
 		$mail->isHTML(true);
-		$mail->Subject    = 'Confirmación'
-		$mail->Body    = '<strong> ' . $_POST['username'] . '</strong>,<br /><br />' . 
-		'Recibimos tu mensaje. Gracias por contactarnos. Responderemos en breve.<br /><br />' .
-		'<br />' .
-		'Body Shop;
+		$mail->Subject    = 'Confirmation';
+		$mail->Body    = 'Dear<strong> ' . $_POST['username'] . '</strong>,<br /><br />' . 
+		'We got your message. Thank you for contacting us. We will reply shortly.<br /><br />' .
+		'Kind Regards,<br />' .
+		'BodyShopTalent Team';
 
 		// Send to who filled the form
 		$mail->send();
@@ -210,8 +210,8 @@ if (!$errors) {
 	echo '</g>';
 	echo '</svg>';
 	echo '</div>';    
-	echo '<h4>Gracias por contactarno.</h4>';
-	echo '<small>Revisa tu correo.</small>';
+	echo '<h4>Thank you for contacting us.</h4>';
+	echo '<small>Check your mailbox.</small>';
 	echo '</div>';
 	echo '<script src="../js/redirect.js"></script>';
 
