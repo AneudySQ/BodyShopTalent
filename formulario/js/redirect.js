@@ -1,5 +1,5 @@
 // Redirect
 function delayedRedirect()	{
-    window.location = 'https://bodyshoptalent.com/'
+    window.location = 'https://ultimatewebsolutions.net/sendy/'
 }
 

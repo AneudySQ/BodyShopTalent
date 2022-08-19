@@ -123,7 +123,7 @@
 		maxFiles: 1,
 
 		// Maximum allowed file size
-		maxFileSize: '5MB',
+		maxFileSize: '1MB',
 
 		// Allowed file types
 		acceptedFileTypes: ['image/png', 'image/jpeg', 'application/pdf'],

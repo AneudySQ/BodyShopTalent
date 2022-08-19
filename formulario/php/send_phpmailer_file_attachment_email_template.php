@@ -7,7 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="description" content="Advanced Contact Form with File Uploader">
 	<meta name="author" content="UWS">
-	<title>BodyShopTalent | Advanced Contact Form</title>
+	<title>Sendy | Advanced Contact Form</title>
 
 	<!-- Favicon -->
 	<link href="../img/favicon.png" rel="shortcut icon">
@@ -45,7 +45,7 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
 require 'phpmailer/src/Exception.php';
-require 'phpmailer/src/PHPMailer.php';
+require 'phpmailer/src/PHPMailer.php'; 
 
 $mail = new PHPMailer(true);
 
@@ -123,19 +123,26 @@ $errors .= sanitizePostTitle('subject', 'Please set a valid Subject.');
 // Continue if NO errors found after validation
 if (!$errors) {	
 
+	// Customer Details
+	$customer_name = $_POST['username'];
+	$customer_mail = $_POST['email'];
+	$customer_phone = $_POST['phone'];	
+	$customer_subject = $_POST['subject'];
+	$customer_message = $_POST['message'];
+
 	/* Mail Sending
 	==================================== */
 
 	try {
 
     	// Recipients
-    	$mail->setFrom('aneudysq@outlook.com', 'BodyShopTalent');                				// Set Sender    	
+    	$mail->setFrom('noreply@yourdomain.com', 'Sendy');                				// Set Sender    	
 		$mail->addAddress('websolutions.ultimate@gmail.com', 'Ultimate Websolutions'); 	// Set Recipients		
-    	$mail->addReplyTo('a.saldana@clubbodyshop.com', 'BodyShopTalent');          					// Set Reply-to Address
+    	$mail->addReplyTo('replyto@yourdomain.com', 'Sendy');          					// Set Reply-to Address
     	$mail->isHTML(true);                                                       
-    	$mail->Subject = 'Message';                                     		// Email Subject
+    	$mail->Subject = 'Message';                                     				// Email Subject
 
-		// Add the uploaded file in attachment if exists		
+		// Explore the uploaded file if exists
 		$tmp_dirs = [];
 		$attachment_ids = $_POST['filepond'];
 		foreach($attachment_ids as $attachment_id) {
@@ -148,57 +155,48 @@ if (!$errors) {
 		}
 
 		// Handle if user provided a file or not
-		if (file_exists($file)) {
+		if (file_exists($file)) {			
 			$file_attachment = 'Can be found attached';
 		} else {
-			$file_attachment = 'was NOT provided';
+			$file_attachment = 'Was NOT uploaded';			
 		}
 
-    	// Content
-    	$mail->isHTML(true);
-		$mail->Body    = '<strong>Message arrived via BodyShopTalent with the following details.</strong> ' . '<br /><br />' .
-		'<strong>Name:</strong> ' . $_POST['username'] . '<br />' .		
-		'<strong>Email:</strong> ' . $_POST['email'] . '<br />' .
-		'<strong>Phone:</strong> ' . $_POST['phone'] . '<br />' .
-		'<strong>Subject:</strong> ' . $_POST['subject'] . '<br /><br />' .
-		'<strong>Message:</strong> '. '<br />' . $_POST['message'] . '<br /><br />' . 
-		'<strong>File:</strong> ' . $file_attachment;
+		// Get the email's html content
+		$email_html = file_get_contents('phpmailer/email-file-attachment.html');
+
+		// Set HTML content	
+		$body = str_replace(
+			array('customerName', 'customerEmail', 'customerPhone', 'customerSubject', 'fileAttachment', 'customerMessage'), 
+			array($customer_name, $customer_mail, $customer_phone, $customer_subject, $file_attachment, $customer_message), $email_html);
+
+		$mail->msgHTML($body);    	
 		
 		// Send to site owner
-		$mail->Send();
+		$mail->send();
 
 		// Send the confirmation to the user who filled the form
 		$mail->clearAddresses();
 		$mail->clearAttachments();
-		$mail->addAddress($_POST['email']); // Email address entered on the form by the visitor
-		$mail->isHTML(true);
+    	$mail->addAddress($_POST['email']); // Email address entered on form
+    	$mail->isHTML(true);
 		$mail->Subject    = 'Confirmation';
-		$mail->Body    = 'Dear<strong> ' . $_POST['username'] . '</strong>,<br /><br />' . 
-		'We got your message. Thank you for contacting us. We will reply shortly.<br /><br />' .
-		'Kind Regards,<br />' .
-		'BodyShopTalent Team';
+		
+		// Get the confirmation email's html content
+		$email_confirmation_html = file_get_contents('phpmailer/email-confirmation.html');
+
+		// Set HTML content
+		$body = str_replace(array('customerName'), array($customer_name), $email_confirmation_html);
+		$mail->MsgHTML($body);
 
 		// Send to who filled the form
 		$mail->send();
+
 
 	} catch (Exception $e) {
 
 		echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 
-	} finally {
-
-		foreach($tmp_dirs as $tmp_dir) {
-
-			foreach(scandir($tmp_dir) as $file_name) {
-
-				if($file_name != '.' && $file_name != '..') {
-					unlink($tmp_dir.'/'.$file_name);
-				}
-			}
-			// Clean up the tmp folder, delete the uploaded file
-			rmdir($tmp_dir);
-		}
-	}
+	} 
 
 	// Success Page
 	echo '<div id="success">';

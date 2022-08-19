@@ -44,7 +44,7 @@ Author URL: https://codecanyon.net/user/ultimatewebsolutions/
 	-moz-animation: circle infinite .95s linear;
 	-o-animation: circle infinite .95s linear;
 	animation: circle infinite .95s linear;
-	border: 3px solid #53c4da;
+	border: 3px solid #f2c657;
 	border-top-color: rgba(0, 0, 0, 0.2);
 	border-right-color: rgba(0, 0, 0, 0.2);
 	border-bottom-color: rgba(0, 0, 0, 0.2);
@@ -165,7 +165,7 @@ p {
 }
 
 a {
-	color: #53c4da;
+	color: #f2c657;
 	text-decoration: none;	
 	outline: none;
 	-moz-transition: all 0.5s ease-in-out;
@@ -215,12 +215,12 @@ button:focus {
 }
 
 .underline-link {
-	color: #53c4da;
+	color: #f2c657;
 	text-decoration: none;	
 	outline: none;
 }
 .underline-link:hover {
-	color: #53c4da;
+	color: #f2c657;
 	text-decoration: underline;
 	outline: none;
 }
@@ -268,19 +268,19 @@ header.static {
 /* Header Menu Color */
 
 .main-menu > ul > li span:hover > a {
-    color: #53c4da;
+    color: #f2c657;
 }
 
 .main-menu ul ul {    
-    border-top: 2px solid #53c4da;
+    border-top: 2px solid #f2c657;
 }
 
 .main-menu ul ul li:hover > a {   
-    color: #53c4da;   
+    color: #f2c657;   
 }
 
 .main-menu ul ul li span > a:hover {	
-	color: #53c4da;
+	color: #f2c657;
 }
 
 /* Header Menu Chevron Down */
@@ -311,7 +311,7 @@ ul#menuIcons li i {
 }
 
 ul#menuIcons li a {
-  	color: #53c4da;
+  	color: #f2c657;
 }
 
 ul#menuIcons li a:hover {
@@ -330,7 +330,7 @@ ul#menuIcons li a:hover {
 	width: 149px;
 	height: 35px;
 	display: block;
-	background: url(../img/logo.aqua.svg) no-repeat 0 0;
+	background: url(../img/logo.gold.svg) no-repeat 0 0;
 	background-size: 149px 35px;
 	text-indent: -9999px;
 }
@@ -340,7 +340,7 @@ ul#menuIcons li a:hover {
 
 
 .sub-header {
-	background-color: #53c4da;
+	background-color: #f2c657;
 	padding: 15px 0;
 	margin-top: 59px;	
 }
@@ -384,7 +384,7 @@ footer.main-footer ul.nav-links li i {
 } 
 
 .contact-links i {
-	color: #53c4da;
+	color: #f2c657;
 	margin-right: 10px;
 	font-size: 18px;
 	vertical-align: middle;
@@ -447,7 +447,7 @@ ul#subFooterLinks li:after {
 }
 
 ul#subFooterLinks i {
-	color: #53c4da;	
+	color: #f2c657;	
 }
 
 /* Containers
@@ -483,7 +483,7 @@ ul#subFooterLinks i {
 }
 
 .box-header h3 strong {
-	background-color: #53c4da;
+	background-color: #f2c657;
 	text-align: center;
 	width: 40px;
 	height: 40px;
@@ -525,8 +525,8 @@ ul#subFooterLinks i {
 }
 
 .box-link:hover {
-	background: #53c4da;
-	border: 1px solid #53c4da;
+	background: #f2c657;
+	border: 1px solid #f2c657;
 	color: #fff;
 }
 
@@ -559,7 +559,7 @@ textarea.form-control {
 input.form-control:focus,
 textarea.form-control:focus {
 	background: transparent;
-	border-color: #53c4da;
+	border-color: #f2c657;
 	outline: none;
 	-webkit-box-shadow: none;
 	box-shadow: none;
@@ -611,18 +611,18 @@ input.form-control:disabled {
 }
 
 .nice-select:hover {
-	border-color: #53c4da;
+	border-color: #f2c657;
 }
 
 .nice-select:active,
 .nice-select.open,
 .nice-select:focus {
-	border-color: #53c4da;
+	border-color: #f2c657;
 }
 
 .nice-select:after {
-	border-bottom: 1px solid #53c4da;
-	border-right: 1px solid #53c4da;
+	border-bottom: 1px solid #f2c657;
+	border-right: 1px solid #f2c657;
 	content: '';
 	display: block;
 	height: 10px;
@@ -708,7 +708,7 @@ input.form-control:disabled {
 
 .nice-select .list {
 	background-color: #fff;
-	border: 1px solid #53c4da;
+	border: 1px solid #f2c657;
 	border-radius: 0;
 	box-sizing: border-box;  
 	opacity: 0;
@@ -804,9 +804,9 @@ input.form-control:disabled {
 /* Form Buttons */
 
 .btn-form-func {
-	background: #53c4da;
+	background: #f2c657;
 	border-radius: 4px;
-	border: 2px solid #53c4da;
+	border: 2px solid #f2c657;
 	color: #fff;
 	display: inline-block;
 	overflow: hidden;
@@ -880,12 +880,12 @@ input.form-control:disabled {
 
 .btn-form-func.btn-form-func-alt-color {
 	background: #fff;
-	border-color: #53c4da;
-	color: #53c4da !important;
+	border-color: #f2c657;
+	color: #f2c657 !important;
 }
 
 .btn-form-func.btn-form-func-alt-color .icon {
-  	border-left-color: #53c4da;
+  	border-left-color: #f2c657;
 }
 
 .btn-form-func.btn-form-func-alt-color:after {
@@ -930,7 +930,7 @@ label.cbx {
 	height: 18px;
 	transform: scale(1);
 	vertical-align: middle;
-	border: 1px solid #53c4da;
+	border: 1px solid #f2c657;
 	transition: all 0.2s ease;
 	margin-right: 10px;	
 }
@@ -955,7 +955,7 @@ label.cbx {
 	content: "";
 	width: 100%;
 	height: 100%;
-	background: #53c4da;
+	background: #f2c657;
 	display: block;
 	transform: scale(0);
 	opacity: 1;
@@ -963,7 +963,7 @@ label.cbx {
 }
 
 .cbx:hover span:first-child {
-  	border-color: #53c4da;
+  	border-color: #f2c657;
 }
 
 .inp-cbx {
@@ -971,8 +971,8 @@ label.cbx {
 }
 
 .inp-cbx:checked + .cbx span:first-child {
-	background: #53c4da;
-	border-color: #53c4da;
+	background: #f2c657;
+	border-color: #f2c657;
 	animation: wave 0.4s ease;
 }
 
@@ -997,13 +997,13 @@ label.cbx {
 .terms-link,
 .terms-link:visited {
 	text-decoration: none;
-  	color:#53c4da;
+  	color:#f2c657;
   	margin-left: 5px;
   	transition: none;
 }
 
 .terms-link:hover {
-  	color:#53c4da;
+  	color:#f2c657;
   	text-decoration: underline;
 }
 
@@ -1056,7 +1056,7 @@ label.cbx {
 
 .contact-box i {
 	font-size: 46px;	
-	color: #53c4da;
+	color: #f2c657;
 }
 
 .contact-box a {
@@ -1064,7 +1064,7 @@ label.cbx {
 }
 
 .contact-box a:hover {
-	color: #53c4da;
+	color: #f2c657;
 	text-decoration: underline;
 }
 
