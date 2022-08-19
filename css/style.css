@@ -5378,7 +5378,25 @@ blockquote.testimonial-big:before{
 	padding:10px 10px 10px 10px;
 	font-style:normal;
 }
+blockquote.testimonial-big-arrow:before{
+	display:block;
+	font-family:FontAwesome;
+	content: url('/images/flecha0.gif');
+	align-content: center;
+	margin: auto;
+	padding-bottom:50px;
+	padding:10px 10px 10px 10px;
+	font-style:normal;
+}
 blockquote.testimonial-big > img{
+	width:100px !important;
+	margin:30px auto;
+	height:auto;
+	border-radius:60px;
+	-moz-border-radius:60px;
+	-webkit-border-radius:60px;
+}
+blockquote.testimonial-big-arrow > img{
 	width:100px !important;
 	margin:30px auto;
 	height:auto;
