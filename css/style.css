@@ -1980,7 +1980,7 @@ a.btn-text:after {
 	padding-left: 10px;
 }
 a.btn-text {
-	color: #fff;
+	color: #000;
 }
 a.btn-big {
 	font-size: 14px;
@@ -2169,7 +2169,7 @@ a.btn-custom, .btn-custom, a.btn-slider, .btn-slider {
 }
 a.btn-custom,a.btn-custom:active,a.btn-custom:focus,a.btn-custom:visited,
 .btn-custom {
-	color: #fff;
+	color: #000;
 	border-radius: 0px;
 	-moz-border-radius: 0px;
 	-webkit-border-radius: 0px;
@@ -2200,6 +2200,7 @@ header a.btn-custom{
 .col-right a.btn-custom{
 	font-size:14px;
 	text-transform:none;
+	color: #000;
 }
 a.btn-border,.btn-border {
 	display:inline-block;
